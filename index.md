@@ -177,11 +177,11 @@
               new mapboxgl.Popup()
                 .setLngLat(coordinates)
                 .setHTML(description)
-                .addTo(map);
-                // Add a custom event listener to the map
+                .addTo(map);            
+            });
+            // Add a custom event listener to the map
               map.on('closeAllPopups', () => {
                 popup.remove();
-            });
 
             // Change the cursor to a pointer when the mouse is over the places layer.
             map.on('mouseenter', 'csvData', function () {
