@@ -72,24 +72,6 @@
     .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
       border-bottom-color: rgb(61, 59, 59);
     }
-
-    .marker {
-      background-image: url('ambulance.png');
-      background-size: cover;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .mapboxgl-popup {
-      max-width: 200px;
-    }
-    
-    .mapboxgl-popup-content {
-      text-align: center;
-      font-family: 'Open Sans', sans-serif;
-    }
   </style>
 </head>
 
@@ -143,12 +125,13 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1q-2aT-MAMVT_PDKNV_bMsA82XFeafWZUbyBHnY--m3Q/gviz/tq?tqx=out:csv&sheet=Sheet1',
+        url: 'https://docs.google.com/spreadsheets/d/1EK20Ifa5qs9lou3a5qXZoYFAcCAhtYM-XTd2eXd5ry4/gviz/tq?tqx=out:csv&sheet=Sheet1',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
-      
-      
+
+
+
       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
           latfield: 'Latitude',
@@ -160,28 +143,36 @@
             //Add the the layer to the map 
             map.addLayer({
               'id': 'csvData',
-              'type': 'marker',
+              'type': 'circle',
               'source': {
                 'type': 'geojson',
                 'data': data
-              },              
+              },
+              'paint': {
+                'circle-radius': 10,
+                'circle-color': "purple"
+              }
             });
-            
-            // add markers to map
-            geojson.features.forEach(function(marker) {
-              
-            // create a HTML element for each feature
-            var el = document.createElement('div');
-            el.className = 'marker';
-        
 
-            // make a marker for each feature and add to the map
-            new mapboxgl.Marker(el)
-            .setLngLat(marker.geometry.coordinates)
-            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-              .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-            .addTo(map);
-            });
+            // add markers to map
+            geojson.features.forEach(function (marker) {
+              // create a DOM element for the marker
+              var el = document.createElement('div');
+              el.className = 'marker';
+              el.style.backgroundImage =
+              'url(https://www.iconsdb.com/icons/download/red/ambulance-16.png' +
+              marker.properties.iconSize.join('/') +
+              '/)';
+              el.style.width = marker.properties.iconSize[0] + 'px';
+              el.style.height = marker.properties.iconSize[1] + 'px';
+              el.addEventListener('click', function () {
+                window.alert(marker.properties.message);
+              });
+              // add marker to map
+              new mapboxgl.Marker(el)
+              .setLngLat(marker.geometry.coordinates)
+              .addTo(map);
+              });
 
 
             // When a click event occurs on a feature in the csvData layer, open a popup at the
@@ -207,9 +198,6 @@
                 .setLngLat(coordinates)
                 .setHTML(description)
                 .addTo(map);
-              // Add a custom event listener to the map
-              map.on('closeAllPopups', () => {
-                popup.remove();
             });
 
             // Change the cursor to a pointer when the mouse is over the places layer.
