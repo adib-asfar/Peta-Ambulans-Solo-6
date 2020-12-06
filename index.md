@@ -203,7 +203,7 @@
 
 
   </script>
-  <div class="myDiv">
+  <div class="myDiv"></div>
   <h1>Halo Ambulans Gratis</h1>
   <h3>Petunjuk pencarian:</h3>
   <h4>Menentukan posisi dan penunjuk arah</h4>
@@ -224,7 +224,6 @@
 </p>
 
 <p>Catatan: operator akan selalu meng-<em>update</em> data ketersediaan mobil</p>
-</div>
 </body>
 
 </html>
