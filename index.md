@@ -125,7 +125,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1EK20Ifa5qs9lou3a5qXZoYFAcCAhtYM-XTd2eXd5ry4/gviz/tq?tqx=out:csv&sheet=Sheet1',
+        url: 'https://docs.google.com/spreadsheets/d/1q-2aT-MAMVT_PDKNV_bMsA82XFeafWZUbyBHnY--m3Q/gviz/tq?tqx=out:csv&sheet=Sheet1',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
@@ -203,229 +203,28 @@
 
 
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h1>Halo Ambulans Gratis</h1>
-<h3>Petunjuk pencarian:</h3>
-<h4>Menentukan posisi dan penunjuk arah</h4>
-<p><ol type="1">
-<li>Klik/sentuh tanda navigasi GPS di sudut kanan atas untuk menentukan lokasi Anda.</li>
-<li>Cari posisi lembaga penyedia ambulans terdekat dengan posisi Anda sekarang.</li>
-<li>Letakkan kursor pada kolom A di kiri atas, lalu klik/sentuh ikon ambulans terdekat pada peta.</li>
-<li>Letakkan kursor pada kolom B di kiri atas. lalu klik titik posisi Anda.</li>
+  <div class="myDiv">
+  <h1>Halo Ambulans Gratis</h1>
+  <h3>Petunjuk pencarian:</h3>
+  <h4>Menentukan posisi dan penunjuk arah</h4>
+  <p><ol type="1">
+  <li>Klik/sentuh tanda navigasi GPS di sudut kanan atas untuk menentukan lokasi Anda.</li>
+  <li>Cari posisi lembaga penyedia ambulans terdekat dengan posisi Anda sekarang.</li>
+  <li>Letakkan kursor pada kolom A di kiri atas, lalu klik/sentuh ikon ambulans terdekat pada peta.</li>
+  <li>Letakkan kursor pada kolom B di kiri atas. lalu klik titik posisi Anda.</li>
+  </ol>
+  </p>
+  
+  <h4>Menghubungi operator</h4>
+  <p><ol type="1">
+  <li>Klik/sentuh ikon ambulans</li>
+  <li>Cek ketersediaan mobil ambulans</li>
+  <li>Jika masih tersedia, tekan nomor telepon di bawahnya untuk menghubungi operator</li>
 </ol>
 </p>
-<h4>Menghubungi operator</h4>
-<p><ol type="1">
-<li>Klik/sentuh ikon ambulans</li>
-<li>Cek ketersediaan mobil ambulans</li>
-<li>Jika masih tersedia, tekan nomor telepon di bawahnya untuk menghubungi operator</li>
-</ol>
-</p>
+
 <p>Catatan: operator akan selalu meng-<em>update</em> data ketersediaan mobil</p>
+</div>
 </body>
 
 </html>
