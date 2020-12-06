@@ -148,29 +148,13 @@
                 'type': 'geojson',
                 'data': data
               },
-              // add markers to map
-              geojson.features.forEach(function (marker) {
-              // create a DOM element for the marker
-              var el = document.createElement('div');
-              el.className = 'marker';
-              el.style.backgroundImage =
-              'url(https://www.iconsdb.com/icons/download/red/ambulance-16.png' +
-              marker.properties.iconSize.join('/') +
-              '/)';
-              el.style.width = marker.properties.iconSize[0] + 'px';
-              el.style.height = marker.properties.iconSize[1] + 'px';
-              el.addEventListener('click', function () {
-                window.alert(marker.properties.message);
-              });
-              // add marker to map
-              new mapboxgl.Marker(el)
-              .setLngLat(marker.geometry.coordinates)
-              .addTo(map);
-              });
+              'paint': {
+                'circle-radius': 10,
+                'circle-color': "purple"
               }
             });
 
-            
+
             // When a click event occurs on a feature in the csvData layer, open a popup at the
             // location of the feature, with description HTML from its properties.
             map.on('click', 'csvData', function (e) {
@@ -219,7 +203,10 @@
 
 
   </script>
-<h1>Halo Ambulans Gratis</h1>
+
+</body>
+<body>
+  <h1>Halo Ambulans Gratis</h1>
 <h3>Petunjuk pencarian:</h3>
 <h4>Menentukan posisi dan penunjuk arah</h4>
 <p><ol type="1">
@@ -237,7 +224,6 @@
 </ol>
 </p>
 <p>Catatan: operator akan selalu meng-<em>update</em> data ketersediaan mobil</p>
-
 </body>
 
 </html>
