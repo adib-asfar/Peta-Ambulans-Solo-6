@@ -148,13 +148,6 @@
         success: function (csvData) { makeGeoJSON(csvData); }
       });
       
-      // add markers to map
-      geojson.features.forEach(function(marker) {
-        
-      // create a HTML element for each feature
-      var el = document.createElement('div');
-      el.className = 'marker';
-      
       
       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
@@ -174,6 +167,14 @@
               },              
             });
             
+            // add markers to map
+            geojson.features.forEach(function(marker) {
+              
+            // create a HTML element for each feature
+            var el = document.createElement('div');
+            el.className = 'marker';
+        
+
             // make a marker for each feature and add to the map
             new mapboxgl.Marker(el)
             .setLngLat(marker.geometry.coordinates)
