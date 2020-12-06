@@ -204,8 +204,8 @@
 
   </script>
   
-  <div class="myDiv"></div>
-  <article>
+  <div class="Peta-Ambulans-Solo-6"></div>
+  <article class="Peta-Ambulans-Solo-6">
   <h1>Halo Ambulans Gratis</h1>
   <h3>Petunjuk pencarian:</h3>
   <h4>Menentukan posisi dan penunjuk arah</h4>
