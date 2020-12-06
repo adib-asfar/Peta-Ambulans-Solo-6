@@ -148,14 +148,8 @@
                 'type': 'geojson',
                 'data': data
               },
-              'paint': {
-                'circle-radius': 10,
-                'circle-color': "purple"
-              }
-            });
-
-            // add markers to map
-            geojson.features.forEach(function (marker) {
+              // add markers to map
+              geojson.features.forEach(function (marker) {
               // create a DOM element for the marker
               var el = document.createElement('div');
               el.className = 'marker';
@@ -173,8 +167,10 @@
               .setLngLat(marker.geometry.coordinates)
               .addTo(map);
               });
+              }
+            });
 
-
+            
             // When a click event occurs on a feature in the csvData layer, open a popup at the
             // location of the feature, with description HTML from its properties.
             map.on('click', 'csvData', function (e) {
