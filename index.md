@@ -150,7 +150,7 @@
               },
               'paint': {
                 'circle-radius': 10,
-                'circle-color': "purple"
+                'circle-color': "red"
               }
             });
 
@@ -229,7 +229,7 @@
   <p><ol type="1">
   <li>Klik/sentuh tanda navigasi GPS di sudut kanan atas untuk menentukan lokasi Anda.</li>
   <li>Cari posisi lembaga penyedia ambulans terdekat dengan posisi Anda sekarang.</li>
-  <li>Letakkan kursor pada kolom A di kiri atas, lalu klik/sentuh ikon ambulans terdekat pada peta.</li>
+  <li>Letakkan kursor pada kolom A di kiri atas, lalu klik/sentuh lingkaran terdekat pada peta.</li>
   <li>Letakkan kursor pada kolom B di kiri atas. lalu klik titik posisi Anda.</li>
   </ol>
   </p>
