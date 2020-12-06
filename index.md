@@ -174,6 +174,7 @@
             //Add the the layer to the map 
             map.addLayer({
               'id': 'csvData',
+              'type': 'marker',
               'source': {
                 'type': 'geojson',
                 'data': data
