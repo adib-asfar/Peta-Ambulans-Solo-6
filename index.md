@@ -204,8 +204,7 @@
 
   </script>
   
-  <div class="Peta-Ambulans-Solo-6"></div>
-  <article class="Peta-Ambulans-Solo-6">
+  <div class="detail__body itp_bodycontent_wrapper"></div>
   <h1>Halo Ambulans Gratis</h1>
   <h3>Petunjuk pencarian:</h3>
   <h4>Menentukan posisi dan penunjuk arah</h4>
@@ -225,7 +224,6 @@
 </ol>
 </p>
 <p>Catatan: operator akan selalu meng-<em>update</em> data ketersediaan mobil</p>
-</article>
 
 </body>
 
