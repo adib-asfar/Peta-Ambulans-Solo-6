@@ -203,7 +203,10 @@
 
 
   </script>
+  
   <div class="myDiv"></div>
+  <label for="Peta-Ambulans-Solo-6">Halo Ambulans Gratis</label>
+  <textarea id="Peta-Ambulans-Solo-6" name="Peta-Ambulans-Solo-6" rows="16" cols="50">
   <h1>Halo Ambulans Gratis</h1>
   <h3>Petunjuk pencarian:</h3>
   <h4>Menentukan posisi dan penunjuk arah</h4>
@@ -221,6 +224,7 @@
   <li>Cek ketersediaan mobil ambulans</li>
   <li>Jika masih tersedia, tekan nomor telepon di bawahnya untuk menghubungi operator</li>
 </ol>
+</textarea>
 </p>
 
 <p>Catatan: operator akan selalu meng-<em>update</em> data ketersediaan mobil</p>
